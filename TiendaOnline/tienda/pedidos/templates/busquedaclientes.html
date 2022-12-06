@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% load static %}
+{% block titulo1 %}
+<h1>resultados de busqueda de clientes</h1>
+<br>
+<br>
+<hr>
+<h3>aqui podras ver los resultados de la busqueda de clientes</h3>
+{% endblock titulo1 %}
+{% block contenido1 %}
+<section>
+    <article>
+        <form action="{% url 'resultadosclientes' %}" method="GET">
+            <input type="text" name="busqueda" id="busqueda">
+            <input type="submit" value="buscar cliente">
+        </form>
+        <p>{{mensaje}}</p>
+    </article>
+
+</section>
+{% endblock contenido1 %}
